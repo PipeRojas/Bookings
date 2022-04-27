@@ -16,11 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping( "/auth")
 public class AuthController {
 
-    public AuthController() {
+    public AuthController(@Autowired JWTGenerate jwtGenerate, @Autowired UserDetailsService userDetailsService) {
+        this.jwtGenerate = jwtGenerate;
+        this.userDetailsService = userDetailsService;
     }
-    @Autowired
+
     JWTGenerate jwtGenerate;
-    @Autowired
+
     UserDetailsService userDetailsService;
 
 
