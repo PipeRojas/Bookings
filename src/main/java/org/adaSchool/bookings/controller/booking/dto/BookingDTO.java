@@ -66,4 +66,24 @@ public class BookingDTO {
     public void setUsersQuantity(Integer usersQuantity) {
         this.usersQuantity = usersQuantity;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if (o == this) {
+            return true;
+        }
+
+        if (!(o instanceof BookingDTO)) {
+            return false;
+        }
+
+        BookingDTO b = (BookingDTO) o;
+        return this.bookingDatetime == b.getBookingDatetime() &&
+                this.isActive == b.getActive() &&
+                this.description == b.getDescription() &&
+                this.endDatetime == b.getEndDatetime() &&
+                this.service == b.getService() &&
+                this.startDatetime == b.getStartDatetime() &&
+                this.usersQuantity == b.getUsersQuantity();
+    }
 }
