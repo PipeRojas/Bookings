@@ -53,6 +53,11 @@ class BookingServiceMongoDBImplTest {
         //Assert
         assertNotNull(response);
         assertEquals(_book,response);
+        assertEquals(_book.getService(),response.getService());
+        assertEquals(_book.getId(),response.getId());
+        assertEquals(_book.getBookingDatetime(),response.getBookingDatetime());
+        assertEquals(_book.getActive(),response.getActive());
+        assertEquals(_book.getUsersQuantity(),response.getUsersQuantity());
     }
 
     @Test
@@ -76,6 +81,11 @@ class BookingServiceMongoDBImplTest {
         //Assert
         assertNotNull(response);
         assertEquals(_book,response.get());
+        assertEquals(_book.getService(),response.get().getService());
+        assertEquals(_book.getId(),response.get().getId());
+        assertEquals(_book.getBookingDatetime(),response.get().getBookingDatetime());
+        assertEquals(_book.getActive(),response.get().getActive());
+        assertEquals(_book.getUsersQuantity(),response.get().getUsersQuantity());
     }
 
     @Test
@@ -89,6 +99,11 @@ class BookingServiceMongoDBImplTest {
         //Assert
         assertNotNull(response);
         assertEquals(_book,response.get());
+        assertEquals(_book.getService(),response.get().getService());
+        assertEquals(_book.getId(),response.get().getId());
+        assertEquals(_book.getBookingDatetime(),response.get().getBookingDatetime());
+        assertEquals(_book.getActive(),response.get().getActive());
+        assertEquals(_book.getUsersQuantity(),response.get().getUsersQuantity());
     }
 
     @Test
@@ -103,5 +118,10 @@ class BookingServiceMongoDBImplTest {
         assertNotNull(response);
         assertTrue(response.isPresent());
         assertEquals(_book,response.get());
+        assertEquals(_book.getService(),response.get().getService());
+        assertEquals(_book.getId(),response.get().getId());
+        assertEquals(_book.getBookingDatetime(),response.get().getBookingDatetime());
+        assertEquals(_book.getActive(),response.get().getActive());
+        assertEquals(_book.getUsersQuantity(),response.get().getUsersQuantity());
     }
 }

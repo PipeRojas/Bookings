@@ -19,7 +19,7 @@ class UserSecurityDetailServiceTest {
     @Test
     void loadUserByUsername_Succeed() {
         //Act
-        UserDetails response = _service.loadUserByUsername(anyString());
+        UserDetails response = _service.loadUserByUsername("");
 
         //Assert
         assertNotNull(response);
